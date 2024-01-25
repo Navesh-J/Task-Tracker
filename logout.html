@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="logout.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <button id="myClickableElement" style="display: none;">Click me</button>
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="images/video.mp4" type="video/mp4">
+        </video>
+
+        <div class="content">
+            <h1>You have Successfully Logged Out!</h1>
+            <a href="login.html">Login Again</a>
+        </div>
+    </div>
+
+</body>
+<script>
+    // Use pushState to add a new entry to the browser's history
+    history.pushState(null, null, location.href);
+
+    // Disable the back button
+    window.onpopstate = function (event) {
+        history.go(1);
+    };
+</script>
+
+</html>
