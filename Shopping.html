@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <!-- Material CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2><span class="danger">TASK </span><span class="primary-variant">TRACKER</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="Personal.html">
+                    <span class="material-icons-sharp">person</span>
+                    <h3>Personal</h3>
+                </a>
+                <a href="Professional.html">
+                    <span class="material-icons-sharp">business_center</span>
+                    <h3>Professional</h3>
+                </a>
+                <a href="Projects.html">
+                    <span class="material-icons-sharp">computer</span>
+                    <h3>Projects</h3>
+                </a>
+                <a href="Shopping.html" class="active">
+                    <span class="material-icons-sharp">shopping_cart</span>
+                    <h3>Shopping</h3>
+                </a>
+                <a href="Finance.html">
+                    <span class="material-icons-sharp">attach_money</span>
+                    <h3>Finance</h3>
+                </a>
+                <div class="date-time">
+                    <p id="currentDay"></p>
+                    <p id="currentDate"></p>
+                    <p id="currentTime"></p>
+                </div>
+                <div class="logout" id="logout">
+                    <a href="">
+                        <span class="material-icons-sharp">power_settings_new</span>
+                        <h3>Log Out</h3>
+                    </a>
+                </div>
+            </div>
+            
+        </aside>
+                        <!-- END OF ASIDE -->
+        <main>
+            <div class="wrapper">
+                <div class="todo-app">
+                    <h2>Your To-Do's<img src="images/icon.png"></h2>
+        
+                    <div class="row">
+                        <input type="text" id="input-box" placeholder="Add your Task">
+                        <button id="submitButton" onclick="addTask()">Add</button>
+                    </div>
+        
+                    <ul id="list-container">
+                        <!-- <li class="checked">Task 1</li>
+                        <li>Task 2</li>
+                        <li>Task 3</li> -->
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- ---------END OF MAIN-------- -->
+        <div class="right">
+            <div class="top">
+                 <div class="theme-toggler">
+                    <!-- <input type="checkbox" id="darkmode"> -->
+                    <span class="material-icons-sharp active"> light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                 </div>
+                 <div class="profile">
+                    <div class="info">
+                        <p>Hey,<b>Navesh</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg" alt="profile-photo">
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="Shopping.js"></script>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
+    import { getAuth, signInWithEmailAndPassword, onAuthStateChanged,signOut} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyCCtryPaNSeH4r0F_8JAf5LfQxK-0DBms4",
+        authDomain: "task-tracker-authentication.firebaseapp.com",
+        databaseURL: "https://task-tracker-authentication-default-rtdb.firebaseio.com",
+        projectId: "task-tracker-authentication",
+        storageBucket: "task-tracker-authentication.appspot.com",
+        messagingSenderId: "314787723461",
+        appId: "1:314787723461:web:6229678b92ed93909998ac"
+    };
+    
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+
+    logout.addEventListener('click',(e)=>{
+        signOut(auth).then(() => {
+            // Sign-out successful.
+            window.location.href="logout.html";
+            // alert("Logout Successful");
+          }).catch((error) => {
+            // An error happened.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(errorMessage);
+          });
+    });
+</script>
+</html>
