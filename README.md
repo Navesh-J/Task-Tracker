@@ -21,9 +21,9 @@ A visually appealing and easy-to-use Task Tracker application built with **HTML*
 
 **Dark Mode**
 
-![Dark Mode Screenshot](https://imgur.com/a/7NnOr0F)
+![Dark Mode Screenshot](https://i.imgur.com/C1U7Pk6.jpeg)
 
 **Light Mode**
 
-![Light Mode Screenshot](https://imgur.com/a/YRrL2Db)
+![Light Mode Screenshot](https://i.imgur.com/fLsCHjd.jpeg)
 
