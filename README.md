@@ -7,7 +7,6 @@
 
 A visually appealing and easy-to-use Task Tracker application built with **HTML**, **CSS**, **JavaScript**, and **Firebase** for user authentication and task management. Keep track of your tasks, toggle between dark and light mode, and much more!
 
-![Task Tracker Demo GIF](https://user-images.githubusercontent.com/your-image.gif)
 
 ## ✨ Features
 
@@ -15,17 +14,16 @@ A visually appealing and easy-to-use Task Tracker application built with **HTML*
 - 📂 **Task Categories**: Organize tasks into categories for better task management.
 - 🕒 **Digital Clock**: Keep an eye on time while managing your tasks.
 - 🌗 **Dark/Light Mode**: Switch between light and dark themes.
-- 🔄 **Persistent Theme**: The app remembers your theme preference using `localStorage`.
-- 💻 **Firebase Backend**: User data and tasks stored in Firebase Realtime Database.
-- 📱 **Responsive Design**: Optimized for both desktop and mobile.
+- 🔄 **Persistent Theme and Tasks**: The app remembers your tasks and theme preference using `localStorage`.
+- 💻 **Firebase Authentication**: User data stored in Firebase Realtime Database.
 
 ## 🖼️ Screenshots
 
 **Dark Mode**
 
-![Dark Mode Screenshot](https://user-images.githubusercontent.com/dark-mode-screenshot.png)
+![Dark Mode Screenshot](https://imgur.com/a/7NnOr0F)
 
 **Light Mode**
 
-![Light Mode Screenshot](https://user-images.githubusercontent.com/light-mode-screenshot.png)
+![Light Mode Screenshot](https://imgur.com/a/YRrL2Db)
 
