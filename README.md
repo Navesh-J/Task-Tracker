@@ -7,6 +7,8 @@
 
 A visually appealing and easy-to-use Task Tracker application built with **HTML**, **CSS**, **JavaScript**, and **Firebase** for user authentication and task management. Keep track of your tasks, toggle between dark and light mode, and much more!
 
+## 🚀 Project Link
+Check out the project [here](https://github.com/Navesh-J/Task-Tracker).
 
 ## ✨ Features
 
